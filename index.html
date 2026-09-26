@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Gaytri ❤️</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#ff6ec4,#7873f5);
+color:white;
+text-align:center;
+overflow-x:hidden;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:30px;
+}
+
+.hero h1{
+font-size:3.5rem;
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{
+text-shadow:0 0 10px white;
+}
+to{
+text-shadow:0 0 35px #ff1493;
+}
+}
+
+.hero p{
+max-width:700px;
+font-size:1.2rem;
+line-height:1.8;
+margin-top:20px;
+}
+
+.gallery-title{
+font-size:2rem;
+margin-bottom:20px;
+}
+
+.gallery{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+padding:30px;
+}
+
+.card{
+background:rgba(255,255,255,.15);
+padding:15px;
+border-radius:20px;
+backdrop-filter:blur(10px);
+box-shadow:0 0 20px rgba(255,255,255,.2);
+}
+
+.card img{
+width:250px;
+height:320px;
+object-fit:cover;
+border-radius:15px;
+border:4px solid white;
+}
+
+.card h3{
+margin-top:10px;
+}
+
+.cake-section{
+padding:60px 20px;
+}
+
+.flame{
+font-size:50px;
+animation:flicker .5s infinite alternate;
+}
+
+@keyframes flicker{
+from{transform:translateY(0);}
+to{transform:translateY(-5px);}
+}
+
+.cake{
+font-size:150px;
+}
+
+button{
+padding:15px 35px;
+font-size:18px;
+border:none;
+border-radius:50px;
+cursor:pointer;
+background:white;
+color:#ff1493;
+font-weight:bold;
+margin-top:20px;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+.hidden{
+display:none;
+}
+
+.letter{
+max-width:800px;
+margin:30px auto;
+padding:30px;
+background:rgba(255,255,255,.15);
+border-radius:20px;
+line-height:1.9;
+font-size:1.2rem;
+}
+
+.footer{
+padding:50px;
+font-size:1.5rem;
+}
+
+.heart{
+position:fixed;
+font-size:24px;
+pointer-events:none;
+animation:float 6s linear forwards;
+z-index:999;
+}
+
+@keyframes float{
+from{
+transform:translateY(100vh);
+opacity:1;
+}
+to{
+transform:translateY(-100px);
+opacity:0;
+}
+}
+
+.confetti{
+position:fixed;
+width:10px;
+height:10px;
+top:-10px;
+animation:fall linear forwards;
+}
+
+@keyframes fall{
+to{
+transform:translateY(110vh) rotate(720deg);
+}
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.4rem;
+}
+
+.card img{
+width:220px;
+height:280px;
+}
+
+.cake{
+font-size:110px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+<h1>🎂 Happy Birthday Gaytri ❤️</h1>
+
+<p>
+From your cute childhood memories 🌸
+to the amazing person you are today ✨
+
+Every smile of yours spreads happiness.
+Every moment becomes beautiful because of you.
+
+May your life be filled with love ❤️
+success 🌟
+happiness 😊
+and endless beautiful memories 🌹
+
+Wishing you the most wonderful birthday ever.
+</p>
+
+</section>
+
+<h2 class="gallery-title">🌸 Gaytri's Beautiful Journey 🌸</h2>
+
+<div class="gallery">
+
+<div class="card">
+<img src="g1.jpg">
+<h3>👑 Little Princess</h3>
+</div>
+
+<div class="card">
+<img src="g2.jpg">
+<h3>🌷 Growing Beautiful</h3>
+</div>
+
+<div class="card">
+<img src="g3.jpg">
+<h3>❤️ The Amazing Gaytri</h3>
+</div>
+
+</div>
+
+<section class="cake-section">
+
+<div id="flame" class="flame">🕯️</div>
+
+<div class="cake">🎂</div>
+
+<button onclick="blowCandle()">
+💨 Blow Candle
+</button>
+
+</section>
+
+<div id="letter" class="letter hidden">
+
+<h2>💌 A Special Letter For Gaytri 💌</h2>
+
+<p>
+
+Dear Gaytri,
+
+Every photo tells a story.
+
+From your childhood innocence 👶
+to the confident and beautiful person you are today ✨
+
+You have grown into someone truly special.
+
+May every dream you have come true.
+May every challenge turn into success.
+May every day bring you happiness.
+
+Never stop smiling 😊
+because your smile makes the world brighter.
+
+You deserve all the love,
+all the happiness,
+and all the beautiful things in life.
+
+❤️ Happy Birthday Gaytri ❤️
+
+</p>
+
+</div>
+
+<div class="footer">
+
+🌹 Some people are special because they are beautiful.
+
+🌹 Some people are special because they are kind.
+
+🌹 But Gaytri is special because she is both. ❤️
+
+</div>
+
+<script>
+
+setInterval(()=>{
+
+let heart=document.createElement("div");
+
+heart.innerHTML="❤️";
+
+heart.className="heart";
+
+heart.style.left=Math.random()*100+"vw";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},6000);
+
+},350);
+
+function blowCandle(){
+
+document.getElementById("flame").style.display="none";
+
+document.getElementById("letter").classList.remove("hidden");
+
+for(let i=0;i<300;i++){
+
+let c=document.createElement("div");
+
+c.className="confetti";
+
+c.style.left=Math.random()*100+"vw";
+
+c.style.background=
+`hsl(${Math.random()*360},100%,50%)`;
+
+c.style.animationDuration=
+(2+Math.random()*4)+"s";
+
+document.body.appendChild(c);
+
+setTimeout(()=>{
+c.remove();
+},7000);
+}
+
+}
+
+</script>
+
+</body>
+</html>
